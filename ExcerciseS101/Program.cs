@@ -6,7 +6,8 @@ namespace Excercise1
 {
     internal class Program
     {
-        // All methods are called here
+        // All methods are called here 
+        //
 
         private static void Main(string[] args)
         {
@@ -23,6 +24,7 @@ namespace Excercise1
         }
 
         //Method to find the current date in year, month, day format
+        //output the date
 
         public static void CurrentDate()
         {
@@ -104,7 +106,6 @@ namespace Excercise1
                         break;
 
                     }
-
 
                 }
                 Console.WriteLine("Sum of the number = " + total);
