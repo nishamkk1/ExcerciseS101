@@ -6,10 +6,11 @@ namespace Excercise1
 {
     internal class Program
     {
+        // All methods are called here 
 
         private static void Main(string[] args)
         {
-
+            
             CurrentDate();
             NumberOfDaysElapsed();
             NextLeapYearStartsWithTuesday();
