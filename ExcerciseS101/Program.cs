@@ -6,7 +6,7 @@ namespace Excercise1
 {
     internal class Program
     {
-        // All methods are called here 
+        // All methods are called here
 
         private static void Main(string[] args)
         {
@@ -82,17 +82,29 @@ namespace Excercise1
 
             {
 
-                decimal total = 0, count = 0;
+                double total = 0, count = 0;
                 Console.WriteLine("Enter Numbers and Enter OK to find their sum");
-                string a = Console.ReadLine();
-                List<int> numbers = new List<int>();
+                var a = Console.ReadLine();
+                List<double> numbers = new List<double>();
 
                 while (a.ToLower() != "ok")
                 {
-                    numbers.Add(Convert.ToInt32(a));
-                    count++;
-                    a = Console.ReadLine();
-                    total = numbers.Sum();
+                    if (Double.TryParse(a, out double number))
+                    {
+                        numbers.Add(number);
+                        count++;
+                        a = Console.ReadLine();
+                        total = numbers.Sum();
+                    }
+
+                    else
+                    {
+
+                        Console.WriteLine("Please imput a valid number");
+                        break;
+
+                    }
+
 
                 }
                 Console.WriteLine("Sum of the number = " + total);
